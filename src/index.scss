@@ -1,0 +1,141 @@
+/* Reset CSS
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom global css*/
+html {
+	font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background:rgba(241,243,246,1);
+  font-size: 1.5rem;
+}
+
+/* Structure */
+.Page {
+	padding: 0 2rem;
+}
+
+.Header {
+	padding: 2rem 2rem 0;
+}
+
+.Card {
+	background:rgba(241,243,246,1) linear-gradient(136deg,#edeff3 0%,rgba(255,255,255,0.76) 100%);
+	box-shadow:10px 10px 15px 0px rgba(202,206,220,0.62),-10px -10px 15px 0px rgba(255,255,255,1);
+	border-radius:10px;
+}
+
+.List {
+}
+.Sectioned {
+	padding: 2rem;
+}
+.Stack {
+    display: flex;
+    flex-wrap: wrap;
+	align-items: stretch;
+	
+	&.Vertical {
+		flex-direction: column;
+	}
+	&.V_center {
+		align-items: center;
+	}
+	&.H_center {
+		justify-content: center;
+	}
+	
+	.Fill {
+		flex-grow: 1;
+	}
+}
+
+/* displayText */
+.DisplayText_extraLarge {
+	font-size: 2.7rem;
+    font-weight: 600;
+    line-height: 3.6rem;
+}
+
+.DisplayText_large {
+	font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 2.8rem;
+}
+
+.Heading {
+	font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    margin: 0;
+}
+
+/* TextStyle */
+.TextStyle_subdued {
+	color: #637381;
+}
+.TextStyle_strong {
+	font-weight: 600;
+}
+
+// Action
+.Button {
+	&.Primary {
+		background:rgba(22,84,240,1);
+		color:rgba(255,255,255,1);
+		box-shadow:7px 7px 10px 0px rgba(119,148,214,0.54),-7px -7px 10px 0px rgba(255,255,255,0.5);
+	}
+	border: 0px;
+	box-shadow:7px 7px 10px 0px rgba(187, 190, 199, 0.54),-7px -7px 10px 0px rgba(255,255,255,0.5);
+	color:#162548
+}
