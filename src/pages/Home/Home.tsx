@@ -5,6 +5,7 @@ import {BillListItem} from 'store/types/bills';
 import Select from 'components/Select';
 import Button from 'components/Button';
 import BillList from './components/BillList';
+import Summary from './components/Summary';
 import useFilterBills from './useFilterBills';
 
 export interface StateProps {
@@ -32,27 +33,16 @@ function Home(props:Props) {
   })
 
   return (
-    <div className="Page">
-
-      <header className={"Header"} style={{textAlign: 'center'}}>
-          <p className="Heading">
-            <span className={clsx('TextStyle_subdued')} style={{marginRight: 12}} >支出</span>
-            <span className="DisplayText_extraLarge">¥{billStatistics['支出']}</span>
-          </p>
-          <p className="Heading">
-            <span className={clsx('TextStyle_subdued')} style={{marginRight: 12}} >收入</span>
-            <span className="DisplayText_extraLarge">¥{billStatistics['收入']}</span>
-          </p>
-      </header>
-
-      <div className={style.detail_container}>
-        <Button onClick={props.gotoAddBill} type="primary" className={style.button}>+</Button>
-        <div style={{display: 'flex', justifyContent: 'SPACE-BETWEEN'}}>
-          <p className={clsx('Heading', 'TextStyle_subdued')} style={{marginBottom: 22}}>账单记录</p>
+    <div className={style.page}>
+      <Summary billStatistics={billStatistics}/>
+      <div className={style.container}>
+        <div className={style.header}>
+          <p>账单记录</p>
           <Select name="month" value={filterMonth} onChange={handleMonth} options={months}></Select>
         </div>
         <BillList billList={filterBillList}/>
       </div>
+      <Button onClick={props.gotoAddBill} type="primary" className={style.button}>+</Button>
     </div>
   );
 }

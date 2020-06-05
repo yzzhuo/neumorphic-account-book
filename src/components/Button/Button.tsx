@@ -4,7 +4,7 @@ import styles from './Button.module.scss';
 
 interface Props {
     children: ReactNode;
-    type?: 'primary'|'default';
+    type?: 'primary'|'default'|'disbaled';
     onClick: VoidFunction;
     className?:string;
 }

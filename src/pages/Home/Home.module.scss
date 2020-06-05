@@ -1,25 +1,31 @@
 
-  
-  .detail_container {
-    position: relative;
-  }
-  
-  .button{
-    position: fixed;
-    border-radius: 100% !important;
-    right:36px;
-    bottom: 36px;
-    width: 5.2rem;
-    height: 5.2rem;
-  }
+.page {
+  padding: 0 2rem;
+	max-width: 68rem;
+	margin: 0 auto;
+}
 
-  .selector {
-    width: 56px;
-    height: 32px;
-    background: white linear-gradient(136deg, #ffffff 0%, rgba(255, 255, 255, 0.76) 100%);
-    box-shadow: 7px 7px 10px 0px rgba(202, 206, 220, 0.31), -7px -7px 10px 0px rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    border: none;
-    font-size:11px;
-    color:rgba(157,165,183,1);
+.container {
+  position: relative;
+}
+  
+.header {
+  display: flex;
+  justify-content: space-between;
+  &>p {
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    margin-bottom: 22px;
+	  color: #637381;
   }
+}
+
+.button{
+  position: fixed;
+  border-radius: 100% !important;
+  right:36px;
+  bottom: 36px;
+  width: 5.2rem;
+  height: 5.2rem;
+}

@@ -3,11 +3,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background:rgba(235,242,250,1);
-    box-shadow:4px 2px 16px 0px rgba(95,157,231,0.48),-4px -2px 16px 0px rgba(255,255,255,1);
-    border-radius:20px 20px 0 0;
 }
 .tab {
+    cursor: pointer;
     padding: 6px;
     border-bottom: none;
     border-radius: 6px 6px 0 0 ;
@@ -19,6 +17,8 @@
 }
 
 .selected {
-    background:#FFFFFF;
-    box-shadow:7px 7px 10px 0px rgba(233, 238, 255, 0.31),-7px -7px 10px 0px rgba(255,255,255,0.5);
+    background:#f1f3f6;
+    box-shadow:inset 4px 2px 8px 0px rgba(185, 185, 185, 0.48), -4px -2px 8px 0px white;
+    border:1px solid rgba(255,255,255,0.2);
+    border-bottom: 0;
 }

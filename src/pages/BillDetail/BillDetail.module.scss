@@ -1,5 +1,10 @@
-.input {
-    width:260px;
+ .container {
+    padding: 0 2rem;
+	max-width: 68rem;
+	margin: 0 auto;
+ }
+ .input {
+    width:100%;
     height:48px;
     background:rgba(229,237,245,1);
     box-shadow:4px 2px 8px 0px rgba(95,157,231,0.48),-4px -2px 8px 0px rgba(255,255,255,1);
@@ -12,16 +17,15 @@
 .form {
     display: flex;
     flex-direction: column;
-    margin-top: 16px;
-    padding: 4px 12px;
+    padding: 22px;
+    border-radius: 4px;    
+    background:rgba(241,243,246,1) linear-gradient(136deg,#edeff3 0%,rgba(255,255,255,0.76) 100%);
+	box-shadow:inset 10px 10px 15px 0px rgba(202,206,220,0.62),-10px -10px 15px 0px rgba(255,255,255,1);
     &>div {
         margin-bottom: 12px;
     }
 }
 
-.types_containers {
-    width: 320px;
-}
 .type {
     display: inline-block;
     margin: 6px;
@@ -35,8 +39,26 @@
     font-size: 14px;
     text-align: center;
     line-height: 52px;
+
+    cursor: pointer;
     &.selected {
         background: #ffffff;
+    }
+}
+
+.subdued {
+    color: #637381;
+}
+
+.button {
+    cursor: pointer;
+    margin: 22px auto;
+    min-width: 240px;
+    min-height: 46px;
+    margin-left: auto;
+
+    &.disabled {
+        background:#637381;
     }
 }
 

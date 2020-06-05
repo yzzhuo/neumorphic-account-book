@@ -14,3 +14,28 @@
     @extend .type;
     background-color: #FC6664;
 }
+
+.time {
+    font-size:14px;
+	color:rgba(157,165,183,1);
+	margin: 22px 4px;
+	font-weight: 600;
+	text-align: center;
+}
+.billItem {
+    background:rgba(241,243,246,1) linear-gradient(136deg,#edeff3 0%,rgba(255,255,255,0.76) 100%);
+	box-shadow:10px 10px 15px 0px rgba(202,206,220,0.62),-10px -10px 15px 0px rgba(255,255,255,1);
+    border-radius:10px;
+    padding: 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+	align-items: stretch;
+    .main {
+        flex-grow: 1;
+    }    
+}
+
+.bold {
+	font-weight: 600;
+}

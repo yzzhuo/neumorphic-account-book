@@ -25,7 +25,7 @@ const getBillList = createSelector(
        const sortBills = [...bills].sort((a, b) => parseInt(b.time) - parseInt(a.time));
        return sortBills.map(bill => ({
             name: categories[bill.category].name,
-            time: dayjs(parseInt(bill.time)).format('YYYY MM-DD HH:MM'),
+            time: dayjs(parseInt(bill.time)).toISOString(),
             date: dayjs(parseInt(bill.time)).format('YYYY MM月DD日'),
             isIncome: bill.type === '1',
             amount: parseInt(bill.amount),

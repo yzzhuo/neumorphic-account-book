@@ -14,18 +14,16 @@ export default function BillList(props: Props) {
           <ul>
             {billGroups.map((billGroup) => (
               <React.Fragment key={billGroup}>
-                <p className="SubHeading">{billGroup}</p>
+                <p className={styles.time}>{billGroup}</p>
                 {billList[billGroup].map((bill,  key) =>
                   <li style={{marginBottom: 16}} key={bill.name + key}>
-                  <div className={clsx('Card', 'Sectioned')}>
-                    <div className="Stack">
+                  <div className={styles.billItem}>
                       <i className={bill.isIncome ? styles.income : styles.outcome} />
-                      <div className={'Fill'}>
-                        <h4 className="TextStyle_strong"  style={{ marginBottom: 6}}>{bill.name}</h4>
-                        <span className="TextStyle_subdued">{bill.time}</span>
+                      <div className={styles.main}>
+                        <h4 className={styles.bold}  style={{ marginBottom: 6}}>{bill.name}</h4>
+                        <span className={styles.bold}>{bill.time}</span>
                       </div>
-                      <p className={"TextStyle_strong"}>{bill.amount}</p>
-                      </div>
+                      <p className={styles.bold}>{bill.amount}</p>
                   </div>
                 </li>
               )}
