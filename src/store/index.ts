@@ -1,11 +1,15 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { combineReducers } from 'redux'
+import { configureStore, getDefaultMiddleware, applyMiddleware } from "@reduxjs/toolkit";
+import { combineReducers, compose } from 'redux'
 import bills from './bills'
 import category from './category';
 
-import {connectRouter} from 'connected-react-router';
+import {connectRouter, routerMiddleware} from 'connected-react-router';
+
 import {createBrowserHistory} from 'history';
 export const history = createBrowserHistory();
+
+const middleware = [...getDefaultMiddleware(), routerMiddleware(history)]
+
 const rootReducer = combineReducers({
 	router: connectRouter(history),
     bills,
@@ -14,6 +18,7 @@ const rootReducer = combineReducers({
 
 export const store = configureStore({
    reducer: rootReducer,
+   middleware,
 });
 
 export type RootState = ReturnType<typeof store.getState>

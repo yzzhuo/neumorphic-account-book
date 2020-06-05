@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import {BillState, AddBill} from './types/bills';
+import {BillState, Bill} from './types/bills';
 import bills from '../data/bill.json';
 
 const initialState:BillState = {
@@ -10,9 +10,9 @@ const billsSlice = createSlice({
   name: 'bills',
   initialState,
   reducers: {
-    addBill(state, action:PayloadAction<AddBill>) {
-      // const { time, text } = action.payload;
-      // state.bills.push({ time, text })
+    addBill(state, action:PayloadAction<Bill>) {
+      console.log('state', state);
+      state.bills.push(action.payload)
     },
   }
 })
