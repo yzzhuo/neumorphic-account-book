@@ -22,15 +22,17 @@ function getRawCategories(state: RootState) : Categories {
 const getBillList = createSelector(
     [getRawBills, getRawCategories],
     (bills, categories) : BillListItem[] => {
-       const sortBills = [...bills].sort((a, b) => parseInt(b.time) - parseInt(a.time));
-       return sortBills.map(bill => ({
+       const sortBills = [...bills].sort((a, b) => Number(b.time) - Number(a.time));
+       return sortBills.map(bill => {
+           const timeObj = dayjs(parseFloat(bill.time));
+           return {
             name: categories[bill.category].name,
-            time: dayjs(parseInt(bill.time)).toISOString(),
-            date: dayjs(parseInt(bill.time)).format('YYYY MM月DD日'),
+            time: timeObj.toISOString(),
+            date: timeObj.format('YYYY MM月DD日'),
             isIncome: bill.type === '1',
-            amount: parseInt(bill.amount),
-            month: dayjs(parseInt(bill.time)).format('M')
-       }));
+            amount: parseFloat(bill.amount),
+            month: timeObj.format('M')
+       }});
     }
 );
 

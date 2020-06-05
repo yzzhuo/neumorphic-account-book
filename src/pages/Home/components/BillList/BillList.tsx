@@ -21,9 +21,9 @@ export default function BillList(props: Props) {
                       <i className={bill.isIncome ? styles.income : styles.outcome} />
                       <div className={styles.main}>
                         <h4 className={styles.bold}  style={{ marginBottom: 6}}>{bill.name}</h4>
-                        <span className={styles.bold}>{bill.time}</span>
+                        <span className={styles.subbed}>{bill.time}</span>
                       </div>
-                      <p className={styles.bold}>{bill.amount}</p>
+                      <p className={styles.bold}>¥{bill.amount}</p>
                   </div>
                 </li>
               )}
