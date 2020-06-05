@@ -1,0 +1,16 @@
+
+.type {
+    width: 12px;
+    height:12px;
+    margin: 12px;
+    border-radius: 50%;
+  }
+.income {
+    @extend .type;
+    background-color: #3DD65D;
+}
+
+.outcome {
+    @extend .type;
+    background-color: #FC6664;
+}
