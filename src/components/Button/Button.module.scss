@@ -1,0 +1,21 @@
+.button {
+    border: 0px;
+	box-shadow:7px 7px 10px 0px rgba(187, 190, 199, 0.54),-7px -7px 10px 0px rgba(255,255,255,0.5);
+	color:#162548;
+    min-height: 3.6rem;
+    min-width: 3.6rem;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    border-radius: 4px;
+    
+	&.primary {
+		background:rgba(22,84,240,1);
+		color:rgba(255,255,255,1);
+		box-shadow:7px 7px 10px 0px rgba(119,148,214,0.54),-7px -7px 10px 0px rgba(255,255,255,0.5);
+    }
+    &.default {
+        background: #ffffff;
+    }
+
+}
