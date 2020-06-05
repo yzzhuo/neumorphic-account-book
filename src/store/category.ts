@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 import {CategoryState} from './types/category';
 import category from '../data/category.json';
 
@@ -14,6 +14,5 @@ const categorySlice = createSlice({
 });
 
 
-export const { } = categorySlice.actions
 
 export default categorySlice.reducer

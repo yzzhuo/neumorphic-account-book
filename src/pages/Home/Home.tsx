@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './Home.module.scss';
-import clsx from 'clsx';
 import {BillListItem} from 'store/types/bills';
 import Select from 'components/Select';
 import Button from 'components/Button';

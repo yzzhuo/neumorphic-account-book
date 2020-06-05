@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import styles from './Tabs.module.scss';
 import clsx from 'clsx';
 

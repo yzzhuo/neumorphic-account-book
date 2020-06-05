@@ -1,5 +1,5 @@
-import { configureStore, getDefaultMiddleware, applyMiddleware } from "@reduxjs/toolkit";
-import { combineReducers, compose } from 'redux'
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { combineReducers } from 'redux'
 import bills from './bills'
 import category from './category';
 
