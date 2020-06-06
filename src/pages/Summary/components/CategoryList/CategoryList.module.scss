@@ -1,0 +1,36 @@
+
+.page {
+    padding: 0 2rem;
+    max-width: 68rem;
+    margin: 0 auto;
+}
+.section {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    span {
+        font-size:14px;
+        color:rgba(126,151,184,1);
+        font-weight: 600;
+    }
+}
+
+.defaultWrapper {
+    width:100%;
+    height:14px;
+    background:rgba(235,242,250,1);
+    box-shadow: inset -4px -2px 8px 0px rgba(255,255,255,0.5), inset 4px 2px 8px 0px rgba(95,157,231,0.48);
+    border-radius:6px;
+    border:2px solid rgba(255,255,255,0.64);
+
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    height:6px;
+    background:linear-gradient(135deg,rgba(255,22,128,1) 0%,rgba(255,9,9,1) 100%);
+    box-shadow:4px 2px 8px 0px rgba(95,157,231,0.66),-4px -2px 8px 0px rgba(255,255,255,1);
+    border-radius:6px;
+    border:2px solid rgba(255,255,255,0.3);
+}

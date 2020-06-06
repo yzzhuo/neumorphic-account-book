@@ -12,7 +12,7 @@ export interface Bill {
 
 
 export interface BillList {
-    [title:string]: BillListItem[]
+    [title: string]: BillListItem[]
 }
 
 export interface BillListItem {
@@ -25,5 +25,14 @@ export interface BillListItem {
 }
 
 export interface BillStatistics {
-    [type:string]: number;
+    [type: string]: number;
+}
+
+export interface BillSummaryItem {
+    category: string;
+    amount: number;
+}
+
+export type BillSummary = {
+    [category: string]: BillSummaryItem;
 }
