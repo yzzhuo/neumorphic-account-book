@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { RootState } from '../../store';
+import { RootState } from 'store';
 import BillDetail, { StateProps, DispatchProps } from './BillDetail';
-import { addBill } from '../../store/bills';
+import { addBill } from 'store/bills';
 import {push} from 'connected-react-router';
 
 const mapStateToProps = (state: RootState): StateProps => {

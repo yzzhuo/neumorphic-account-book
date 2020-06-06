@@ -20,7 +20,7 @@
     padding: 22px;
     border-radius: 4px;    
     background:rgba(241,243,246,1) linear-gradient(136deg,#edeff3 0%,rgba(255,255,255,0.76) 100%);
-	box-shadow:inset 10px 10px 15px 0px rgba(202,206,220,0.62),-10px -10px 15px 0px rgba(255,255,255,1);
+	box-shadow:inset 10px 10px 15px 0px rgba(202,206,220,0.62), inset -10px -10px 15px 0px rgba(255,255,255,1);
     &>div {
         margin-bottom: 12px;
     }

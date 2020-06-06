@@ -22,7 +22,7 @@ type Props = StateProps & DispatchProps & OwnProps;
 export default function BillDetail(props: Props) {
     const [startDate, setStartDate] = React.useState<Date|null>(new Date());
     const [type, setType] = React.useState<string>('0');
-    const [categroryId, setCategoryId] = React.useState<string>(props.categories[0].id);
+    const [categroryId, setCategoryId] = React.useState<string>(props.categories[0]?.id);
     const [amount, setAmount] = React.useState<string>('');
 
     const handleSave = () => {
@@ -51,7 +51,7 @@ export default function BillDetail(props: Props) {
             <div className={styles.form}>
                 <div>
                     <p className={styles.subdued} style={{marginBottom: 22}}>金额</p>
-                    <input type="number" placeholder="输入账单的金额" className={styles.input} value={amount} onChange={(ev)=> {
+                    <input name="amount" type="number" placeholder="输入账单的金额" className={styles.input} value={amount} onChange={(ev)=> {
                         setAmount(ev.target.value)
                     }}/>
                 </div>
