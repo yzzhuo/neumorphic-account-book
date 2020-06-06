@@ -1,7 +1,8 @@
 import { createSelector } from 'reselect';
 import { RootState } from '../store';
-import { Category } from '../store/types/category';
 import { BillListItem } from '../store/types/bills';
+import getCategoryMap from './getCategoryMap';
+
 import dayjs from 'dayjs';
 
 
@@ -9,18 +10,9 @@ function getRawBills(state: RootState) {
     return state.bills.bills;
 }
 
-interface Categories {
-    [key:string]: Category;
-}
-function getRawCategories(state: RootState) : Categories {
-    const rawCategories = state.category.categories;
-    return rawCategories.reduce((obj, item) => Object.assign(obj, { [item.id]: item }), {});
-
-}
-
 
 const getBillList = createSelector(
-    [getRawBills, getRawCategories],
+    [getRawBills, getCategoryMap],
     (bills, categories) : BillListItem[] => {
        const sortBills = [...bills].sort((a, b) => Number(b.time) - Number(a.time));
        return sortBills.map(bill => {
