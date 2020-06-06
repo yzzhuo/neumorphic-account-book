@@ -6,6 +6,7 @@ import Button from 'components/Button';
 import BillList from './components/BillList';
 import Summary from './components/Summary';
 import useFilterBills from './useFilterBills';
+import {months} from 'utils/data';
 
 export interface StateProps {
   bills: BillListItem[];
@@ -21,15 +22,6 @@ type Props = OwnProps & StateProps & DispatchProps;
 
 function Home(props:Props) {
   const {filterBillList ,filterMonth, handleMonth, billStatistics} = useFilterBills(props.bills);
-
-  const months = [...Array(12)].map((item, key) => ({
-    label: `${key + 1}月`,
-    value: String(key + 1),
-  }));
-  months.unshift({
-    label: '全部',
-    value: '',
-  })
 
   return (
     <div className={style.page}>

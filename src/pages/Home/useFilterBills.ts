@@ -33,6 +33,7 @@ export default function useFilterBills(bills: BillListItem[]) {
         });
         setBillStatistics(billStatistics)
     }
+
     return {
         filterBillList,
         filterMonth,

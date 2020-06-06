@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import { RootState } from '../../store';
+import { RootState } from 'store';
 import Home, { StateProps, DispatchProps } from './Home';
-import getBillList from '../../selectors/getBillList';
-import {push} from 'connected-react-router';
+import getBillList from 'selectors/getBillList';
+import { push } from 'connected-react-router';
 
 const mapStateToProps = (state: RootState): StateProps => {
     return {

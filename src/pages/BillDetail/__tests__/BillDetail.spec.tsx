@@ -1,12 +1,11 @@
 import React from "react";
-import {ReactWrapper} from 'enzyme';
+import { ReactWrapper } from 'enzyme';
 import { render } from "utils/test";
 import DatePicker from "react-datepicker";
-import BillDetail from "../index";
 
 describe("<BillDetail />", () => {
-  const push = jest.fn(() => ({type: 'push'}));
-  const addBill = jest.fn(() => ({type: 'addBill'}));
+  const push = jest.fn(() => ({ type: 'push' }));
+  const addBill = jest.fn(() => ({ type: 'addBill' }));
   let wrapper: ReactWrapper;
   beforeAll(() => {
     jest.doMock('connected-react-router', () => ({
@@ -23,7 +22,7 @@ describe("<BillDetail />", () => {
         return date;
       }
     } as any
-    const {default: BillDetail} = require('../index');  
+    const { default: BillDetail } = require('../index');
     wrapper = render(<BillDetail />, {
       category: {
         categories: [
@@ -36,7 +35,7 @@ describe("<BillDetail />", () => {
       },
     });
   })
-  
+
   it("render amount input ", () => {
     expect(wrapper.find("input").first()).toMatchInlineSnapshot(`
       <input
@@ -67,14 +66,14 @@ describe("<BillDetail />", () => {
     `);
   });
   it('render category of bill', () => {
-      expect(wrapper.find({
-          children: '房贷'
-      })).toHaveLength(1)
+    expect(wrapper.find({
+      children: '房贷'
+    })).toHaveLength(1)
   });
   it('handle add bill', () => {
-      wrapper.find('input').first().simulate('change', { target: { value: '12' }});
-      wrapper.find('button').simulate('click');
-      expect(addBill).toBeCalledWith({"amount": "12", "category": "0", "time": "1591441260000", "type": "0"});
-      expect(push).toBeCalledWith("/");
+    wrapper.find('input').first().simulate('change', { target: { value: '12' } });
+    wrapper.find('button').simulate('click');
+    expect(addBill).toBeCalledWith({ "amount": "12", "category": "0", "time": "1591441260000", "type": "0" });
+    expect(push).toBeCalledWith("/");
   })
 });
