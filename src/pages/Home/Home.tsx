@@ -24,7 +24,7 @@ function Home(props: Props) {
   const { filterBillList, filterMonth, handleMonth, billStatistics } = useFilterBills(props.bills);
 
   return (
-    <div className={style.page}>
+    <div>
       <Summary billStatistics={billStatistics} />
       <div className={style.container}>
         <div className={style.header}>

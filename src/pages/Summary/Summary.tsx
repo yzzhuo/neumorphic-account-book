@@ -17,12 +17,15 @@ export type Props = DispatchProps & StateProps;
 
 export default function Summary(props: Props) {
     const { filterMonth, handleMonth, summaryList } = useGetSummary(props.bills);
+    const totalAmount = summaryList.reduce((total, current) => {
+        return total + current.amount;
+    }, 0)
     return (
-        <div className={styles.page}>
+        <div>
             <header className={styles.header}>
                 <p className={styles.section}>
-                    <span className={styles.subTitle} >分类统计</span>
-                    <span className={styles.amount}>¥123213</span>
+                    <span className={styles.subTitle} >支出统计</span>
+                    <span className={styles.amount}>¥{totalAmount}</span>
                 </p>
             </header>
 

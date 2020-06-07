@@ -10,7 +10,7 @@ export default function CategoryList(props: Props) {
         return total + current.amount;
     }, 0)
     return (
-        <ul className={styles.page}>
+        <ul>
             {props.billSummary.map((item, key) => {
                 return (
                     <li key={item.category + key}>
